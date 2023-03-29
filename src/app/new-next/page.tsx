@@ -35,10 +35,7 @@ function NewNext() {
           <Link href={url['new-next'].rendering.index}>Rendering</Link>
         </li>
         <li>
-          <Link href={'/#'}>Built-in CSS Support</Link>
-        </li>
-        <li>
-          <Link href={'/#'}>Layout Component</Link>
+          <Link href={'/new-next/data-fetching'}>Data Fetching</Link>
         </li>
         <li>
           <Link href={'/#'}>Image Optimization</Link>
