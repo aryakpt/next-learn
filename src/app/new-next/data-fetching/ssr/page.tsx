@@ -2,19 +2,15 @@ import React from 'react';
 
 import Image from 'next/image';
 
-async function getPokemon() {
-  try {
-    const response = await fetch('https://jherr-pokemon.s3.us-west-1.amazonaws.com/index.json', {
-      cache: 'no-store',
-    });
-    return await response.json();
-  } catch (error: any) {
-    console.error(error.message);
-  }
+async function getData() {
+  const response = await fetch('https://jherr-pokemon.s3.us-west-1.amazonaws.com/index.json', {
+    cache: 'no-store',
+  });
+  return await response.json();
 }
 
 async function SSR() {
-  const pokemons: any[] = await getPokemon();
+  const pokemons: any[] = await getData();
   return (
     <div>
       <h2>Pokemon List</h2>

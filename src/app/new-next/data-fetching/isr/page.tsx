@@ -1,19 +1,14 @@
 import React from 'react';
 
-async function getWorldTime() {
-  try {
-    const response = await fetch('http://worldtimeapi.org/api/Asia/Jakarta', {
-      next: { revalidate: 10 },
-    });
-    const data = await response.json();
-    return data;
-  } catch (error: any) {
-    console.error(error.message);
-  }
+async function getData() {
+  const response = await fetch('http://worldtimeapi.org/api/Asia/Jakarta', {
+    next: { revalidate: 10 },
+  });
+  return response.json();
 }
 
 async function ISR() {
-  const response: any = await getWorldTime();
+  const response: any = await getData();
   const time = new Date(response?.datetime).toLocaleTimeString('en-US', {
     hour12: false,
   });
