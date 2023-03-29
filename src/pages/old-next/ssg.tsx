@@ -1,5 +1,5 @@
 import React from 'react';
-import { apiGetWorldTime } from '@/services/worldtimeapi';
+import { apiGetWorldTime } from '@/services/api';
 import Layout from '@/components/layout';
 
 interface Props {

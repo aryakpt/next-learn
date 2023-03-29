@@ -8,3 +8,12 @@ export const apiGetWorldTime = async () => {
     console.error(error.message);
   }
 };
+
+export const apiGetPokemon = async () => {
+  try {
+    const response = await axios.get('https://jherr-pokemon.s3.us-west-1.amazonaws.com/index.json');
+    return response;
+  } catch (error: any) {
+    console.error(error.message);
+  }
+};
