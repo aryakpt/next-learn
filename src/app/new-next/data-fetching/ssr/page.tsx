@@ -14,11 +14,11 @@ async function getPokemon() {
 }
 
 async function SSR() {
-  const pokemons = await getPokemon();
+  const pokemons: any[] = await getPokemon();
   return (
     <div>
       <h2>Pokemon List</h2>
-      {pokemons.map((pokemon: { id: number; name: string; image: string }) => {
+      {pokemons?.map((pokemon: { id: number; name: string; image: string }) => {
         return (
           <div key={pokemon.id}>
             <Image
