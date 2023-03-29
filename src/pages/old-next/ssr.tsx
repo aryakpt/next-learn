@@ -12,7 +12,7 @@ function SSR({ time }: Props) {
 export async function getServerSideProps() {
   // Fetch data from external API
   const response: any = await apiGetWorldTime();
-  const time = new Date(response?.datetime).toLocaleTimeString('en-US', {
+  const time = new Date(response?.data?.datetime).toLocaleTimeString('en-US', {
     hour12: false,
   });
   // Pass data to the page via props

@@ -1,7 +1,8 @@
+import axios from 'axios';
+
 export const apiGetWorldTime = async () => {
   try {
-    const res = await fetch('http://worldtimeapi.org/api/Asia/Jakarta');
-    const response = await res.json();
+    const response = await axios.get('http://worldtimeapi.org/api/Asia/Jakarta');
     return response;
   } catch (error: any) {
     console.error(error.message);

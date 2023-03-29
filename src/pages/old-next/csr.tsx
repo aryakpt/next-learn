@@ -8,7 +8,7 @@ function CSR() {
 
   const getWorldTime = async () => {
     const response: any = await apiGetWorldTime();
-    const time = new Date(response?.datetime).toLocaleTimeString('en-US', {
+    const time = new Date(response?.data?.datetime).toLocaleTimeString('en-US', {
       hour12: false,
     });
     setTime(time);
