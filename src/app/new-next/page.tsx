@@ -38,10 +38,7 @@ function NewNext() {
           <Link href={'/new-next/data-fetching'}>Data Fetching</Link>
         </li>
         <li>
-          <Link href={'/#'}>Image Optimization</Link>
-        </li>
-        <li>
-          <Link href={'/#'}>Font Optimization</Link>
+          <Link href={'/new-next/optimization/image'}>Image Optimization</Link>
         </li>
       </ol>
     </div>
