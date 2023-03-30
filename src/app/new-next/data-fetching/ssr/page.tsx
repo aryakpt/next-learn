@@ -41,6 +41,7 @@ async function SSR() {
   return (
     <div>
       <Suspense fallback={<>Fetching....</>}>
+        {/* @ts-ignore */}
         <Time />
       </Suspense>
       <p>Parralel - {time}</p>
